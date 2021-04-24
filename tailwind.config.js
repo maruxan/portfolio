@@ -4,10 +4,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      // Animations
       animation: {
         fadeInTop: 'fadeInTop 100ms ease-in forwards',
         fadeInBottom: 'fadeInBottom 100ms ease-in forwards',
       },
+
+      // Keyframes
       keyframes: {
         fadeInTop: {
           '0%': { opacity: '0', transform: 'translateY(-30%)' },

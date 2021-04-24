@@ -11,14 +11,16 @@ export default function Contact() {
       <nav>
         <ul className="md:text-xl">
           <li>
-            <a href="phone:+543624038992" className="hover:underline">
+            <a
+              href="phone:+543624038992"
+              className="hover:underline active:italic">
               +54 362 4038992
             </a>
           </li>
           <li>
             <a
               href="mailto:garavagliamauricio@gmail.com"
-              className="hover:underline">
+              className="hover:underline active:italic">
               garavagliamauricio@gmail.com
             </a>
           </li>
@@ -27,7 +29,7 @@ export default function Contact() {
               href="https://github.com/maruxan"
               target="_blank"
               rel="noreferrer"
-              className="hover:underline">
+              className="hover:underline active:italic">
               github
             </a>
           </li>
@@ -36,7 +38,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/mauricio-garavaglia/"
               target="_blank"
               rel="noreferrer"
-              className="hover:underline">
+              className="hover:underline active:italic">
               linkedin
             </a>
           </li>
