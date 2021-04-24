@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       />
       <Backdrop show={showMenu} closeMenu={() => setShowMenu(false)} />
       <NavMenu show={showMenu} closeMenu={() => setShowMenu(false)} />
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto mt-20">
         <main>{children}</main>
       </div>
     </>

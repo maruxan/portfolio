@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import Logo from '../navigation/logo';
 
 const Header = ({ siteTitle, openMenu }) => (
-  <header className="bg-gray-300 h-20 flex items-center">
+  <header className="fixed top-0 w-full bg-gray-100 h-20 flex items-center">
     <div className="w-11/12 mx-auto flex justify-between items-center">
       <Logo />
       <button
