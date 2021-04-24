@@ -26,6 +26,7 @@ export default function Contact() {
             <a
               href="https://github.com/maruxan"
               target="_blank"
+              rel="noreferrer"
               className="hover:underline">
               github
             </a>
@@ -34,6 +35,7 @@ export default function Contact() {
             <a
               href="https://www.linkedin.com/in/mauricio-garavaglia/"
               target="_blank"
+              rel="noreferrer"
               className="hover:underline">
               linkedin
             </a>

@@ -7,7 +7,9 @@ export default function Logo() {
     <div
       className="flex text-3xl max-w-max"
       onMouseEnter={() => setIsExtended(true)}
-      onMouseLeave={() => setIsExtended(false)}>
+      onMouseLeave={() => setIsExtended(false)}
+      role="button"
+      tabIndex="0">
       <div>/m</div>
       <div
         className={`mr-2 hidden transition opacity-0 origin-left animate-fadeInBottom ${
