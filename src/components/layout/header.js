@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import Logo from '../navigation/logo';
+import Logo from '../ui/logo';
 
 const Header = ({ siteTitle, openMenu }) => (
   <header className="fixed top-0 w-full bg-gray-100 h-20 flex items-center">
