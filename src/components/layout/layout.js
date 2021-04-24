@@ -10,9 +10,13 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
+import NavMenu from '../navigation/navMenu';
+import Backdrop from '../ui/backdrop';
 import '../../styles/layout.css';
 
 const Layout = ({ children }) => {
+  const [showMenu, setShowMenu] = React.useState(false);
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +29,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        openMenu={() => setShowMenu(true)}
+      />
+      <Backdrop show={showMenu} closeMenu={() => setShowMenu(false)} />
+      <NavMenu show={showMenu} closeMenu={() => setShowMenu(false)} />
       <div className="w-11/12 mx-auto">
         <main>{children}</main>
       </div>
