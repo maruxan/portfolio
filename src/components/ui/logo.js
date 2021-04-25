@@ -5,7 +5,7 @@ export default function Logo() {
 
   return (
     <div
-      className="flex text-3xl max-w-max"
+      className="flex text-3xl max-w-max cursor-default"
       onMouseEnter={() => setIsExtended(true)}
       onMouseLeave={() => setIsExtended(false)}
       role="button"

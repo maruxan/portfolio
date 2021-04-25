@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NavigationItems from './navigationItems';
-import Contact from './contact';
+import NavigationItems from '../navigation/navigationItems';
+import Contact from '../navigation/contact';
 
 export default function NavMenu({ show, closeMenu }) {
   return (

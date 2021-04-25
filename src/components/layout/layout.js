@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
-import NavMenu from '../navigation/navMenu';
+import NavMenu from './navMenu';
 import Backdrop from '../ui/backdrop';
 import '../../styles/layout.css';
 
@@ -35,9 +35,7 @@ const Layout = ({ children }) => {
       />
       <Backdrop show={showMenu} closeMenu={() => setShowMenu(false)} />
       <NavMenu show={showMenu} closeMenu={() => setShowMenu(false)} />
-      <div className="w-11/12 mx-auto mt-20">
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
     </>
   );
 };
