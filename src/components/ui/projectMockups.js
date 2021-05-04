@@ -5,21 +5,22 @@ export default function ProjectMockups({ desktop, mobile }) {
   return (
     <div className="relative w-full h-full">
       {/* Desktop */}
-      <div className="">
+      <figure className="">
         <StaticImage
           src="../../images/marq-desktop.png"
           alt="Project desktop view"
         />
-      </div>
-      <p>desktop view</p>
+        <figcaption className="text-center mt-2">desktop view</figcaption>
+      </figure>
       {/* Mobile */}
-      <div className="p-2">
+      <figure className="w-full">
         <StaticImage
           src="../../images/marq-mobile.png"
           alt="Project mobile view"
-          className="w-auto"
+          className="w-56 mx-auto block"
         />
-      </div>
+        <figcaption className="text-center">mobile view</figcaption>
+      </figure>
     </div>
   );
 }
