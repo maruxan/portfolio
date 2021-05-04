@@ -12,7 +12,7 @@ export default function Contact() {
         <ul className="md:text-xl">
           <li>
             <a
-              href="phone:+543624038992"
+              href="tel:+543624038992"
               className="hover:underline active:italic">
               +54 362 4038992
             </a>

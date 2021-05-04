@@ -10,7 +10,7 @@ export default function ProjectMockups({ desktop, mobile }) {
           src="../../images/marq-desktop.png"
           alt="Project desktop view"
         />
-        <figcaption className="text-center mt-2 lg:hidden">
+        <figcaption className="text-center my-2 lg:hidden">
           desktop view
         </figcaption>
       </figure>
