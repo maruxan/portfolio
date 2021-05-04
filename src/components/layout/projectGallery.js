@@ -2,6 +2,7 @@ import React from 'react';
 
 import { AiOutlineExport } from 'react-icons/ai';
 import Technologies from '../ui/technologies';
+import ProjectMockups from '../ui/projectMockups';
 
 export default function ProjectGallery({ projects }) {
   return (
@@ -15,10 +16,10 @@ export default function ProjectGallery({ projects }) {
 
 function ProjectGalleryItem({ project }) {
   return (
-    <div className="h-full w-screen pl-[4vw]">
-      <div className="w-full flex">
+    <div className="w-screen  m-0">
+      <div className="w-full h-full lg:flex">
         {/* project description */}
-        <div>
+        <div className="h-full my-6 pl-[4vw]">
           <h1>{project.name}</h1>
           <p>{project.category}</p>
           <p>{project.description}</p>
@@ -34,7 +35,7 @@ function ProjectGalleryItem({ project }) {
           </a>
         </div>
         {/* project mockups */}
-        <div></div>
+        <ProjectMockups />
       </div>
     </div>
   );
