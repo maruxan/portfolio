@@ -16,10 +16,10 @@ export default function ProjectGallery({ projects }) {
 
 function ProjectGalleryItem({ project }) {
   return (
-    <div className="w-screen  m-0">
-      <div className="w-full h-full lg:flex">
+    <div className="w-screen m-0">
+      <div className="w-full h-full lg:flex items-center">
         {/* project description */}
-        <div className="h-full my-6 pl-[4vw]">
+        <div className="h-full my-6 pl-[4vw] lg:w-1/3">
           <h1>{project.name}</h1>
           <p>{project.category}</p>
           <p>{project.description}</p>
