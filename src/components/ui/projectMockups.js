@@ -3,7 +3,7 @@ import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 export default function ProjectMockups({ desktop, mobile }) {
   return (
-    <div className="relative w-full h-full lg:flex lg:flex-row-reverse items-center">
+    <div className="w-full h-full lg:flex lg:flex-row-reverse items-center">
       {/* Desktop */}
       <figure className="m-0 lg:pr-[4vw] lg:w-4/5 transform lg:-translate-y-6">
         <StaticImage
@@ -15,7 +15,7 @@ export default function ProjectMockups({ desktop, mobile }) {
         </figcaption>
       </figure>
       {/* Mobile */}
-      <figure className="m-0 w-full lg:w-1/5 transform lg:translate-x-1/2 lg:translate-y-16">
+      <figure className="m-0 pb-24 lg:pb-0 w-full lg:w-1/5 transform lg:translate-x-1/2 lg:translate-y-16">
         <StaticImage
           src="../../images/marq-mobile.png"
           alt="Project mobile view"

@@ -6,7 +6,7 @@ import ProjectMockups from '../ui/projectMockups';
 
 export default function ProjectGallery({ projects }) {
   return (
-    <div className="min-h-screen min-w-full py-20 flex items-center">
+    <div className="min-h-screen min-w-full relative">
       {projects.map((project, index) => (
         <ProjectGalleryItem project={project} key={index} />
       ))}
@@ -16,10 +16,10 @@ export default function ProjectGallery({ projects }) {
 
 function ProjectGalleryItem({ project }) {
   return (
-    <div className="w-screen m-0">
+    <div className="w-full h-full m-0 absolute inset-0 py-20">
       <div className="w-full h-full lg:flex items-center">
         {/* project description */}
-        <div className="h-full my-6 pl-[4vw] lg:w-1/3">
+        <div className="my-6 pl-[4vw] lg:w-1/3">
           <h1>{project.name}</h1>
           <p>{project.category}</p>
           <p>{project.description}</p>
