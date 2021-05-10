@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Layout from '../components/layout/layout';
 import Seo from '../components/seo/seo';
-import ProjectNavBar from '../components/layout/projectsNavBar';
-import ProjectGallery from '../components/layout/projectGallery';
+import ProjectNavBar from '../components/projectNavigation/projectsNavBar';
+import ProjectGallery from '../components/projectGallery/projectGallery';
 
 const projects = [
   {

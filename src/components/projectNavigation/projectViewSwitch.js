@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ProjectView() {
+export default function ProjectViewSwitch() {
   return (
     <div className="flex">
       <div className="text-gray-500 text-xl hover:text-gray-900">gallery</div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AiOutlineExport } from 'react-icons/ai';
 import Technologies from '../ui/technologies';
-import ProjectMockups from '../ui/projectMockups';
+import ProjectMockups from './projectMockups';
 
 export default function ProjectGallery({ projects }) {
   return (
