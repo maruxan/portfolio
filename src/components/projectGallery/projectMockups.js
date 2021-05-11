@@ -9,6 +9,7 @@ export default function ProjectMockups({ desktop, mobile }) {
         <StaticImage
           src="../../images/marq-desktop.png"
           alt="Project desktop view"
+          className="rounded-xl"
         />
         <figcaption className="text-center my-2 lg:hidden">
           desktop view

@@ -13,9 +13,9 @@ export default function NavMenu({ show, closeMenu }) {
         {/* close buton */}
         <div className="h-20 flex items-center justify-end">
           <button
-            className="text-2xl md:text-xl px-2 py-1 hover:underline focus:outline-none active:italic"
+            className="text-2xl md:text-xl px-3 py-2 transition hover:shadow-md active:shadow-inner rounded-lg focus:outline-none"
             onClick={closeMenu}>
-            close
+            close &#x2715;
           </button>
         </div>
         {/* navigation */}
