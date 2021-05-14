@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
-
 export default function ProjectNavigation() {
   return (
     <div className="hidden md:flex justify-between items-center text-xl text-gray-500 w-2/3">

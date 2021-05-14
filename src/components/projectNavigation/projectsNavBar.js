@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsArrowRight } from 'react-icons/bs';
 
 import ProjectViewSwitch from './projectViewSwitch';
 import ProjectNavigation from './projectNavigation';
