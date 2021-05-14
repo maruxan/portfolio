@@ -11,10 +11,10 @@ export default function ProjectGalleryItem({ project }) {
   return (
     <animated.div
       style={spring}
-      className="w-full h-full m-0 absolute inset-0 py-20">
-      <div className="w-full h-full lg:flex items-center">
+      className="w-full h-full m-0 inset-0 pt-20 lg:pb-20">
+      <div className="w-screen h-full lg:flex items-center px-[4vw]">
         {/* project description */}
-        <div className="my-6 pl-[4vw] lg:w-1/3">
+        <div className="my-6 lg:w-1/3">
           <h1>{project.name}</h1>
           <p>{project.category}</p>
           <p>{project.description}</p>

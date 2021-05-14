@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       />
       <Backdrop show={showMenu} closeMenu={() => setShowMenu(false)} />
       <NavMenu show={showMenu} closeMenu={() => setShowMenu(false)} />
-      <main>{children}</main>
+      <main className="select-none">{children}</main>
     </>
   );
 };
