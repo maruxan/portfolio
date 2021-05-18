@@ -17,7 +17,7 @@ export default function ProjectNavBar({
           slideToNext={slideToNext}
           slideToPrev={slideToPrev}
           totalProjects={totalProjectsCount}
-          currentProject={currentProjectIndex}
+          currentProject={currentProjectIndex + 1}
         />
       </div>
     </div>
