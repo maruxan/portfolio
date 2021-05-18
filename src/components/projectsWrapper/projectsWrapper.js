@@ -37,6 +37,7 @@ const projects = [
 ];
 
 export default function ProjectsWrapper() {
+  const [currentView, setCurrentView] = useState('gallery');
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
   // Carousel items array
@@ -66,14 +67,24 @@ export default function ProjectsWrapper() {
     }
   });
 
+  // Switch view
+  const switchView = (view) => {
+    setCurrentView(view);
+  };
+
+  let view = <ProjectGallery>{carouselFragment}</ProjectGallery>;
+  if (currentView === 'index') view = null;
+
   return (
     <div>
-      <ProjectGallery>{carouselFragment}</ProjectGallery>
+      {view}
       <ProjectNavBar
         slideToNext={slideToNextItem}
         slideToPrev={slideToPrevItem}
         totalProjectsCount={items.length}
         currentProjectIndex={currentItemIndex}
+        switchView={switchView}
+        currentView={currentView}
       />
     </div>
   );

@@ -8,11 +8,13 @@ export default function ProjectNavBar({
   slideToPrev,
   totalProjectsCount,
   currentProjectIndex,
+  switchView,
+  currentView,
 }) {
   return (
     <div className="fixed bottom-0 left-0 w-full bg-gray-50 h-20 flex items-center">
       <div className="w-11/12 mx-auto flex justify-between items-center">
-        <ProjectViewSwitch />
+        <ProjectViewSwitch switchView={switchView} currentView={currentView} />
         <ProjectNavigation
           slideToNext={slideToNext}
           slideToPrev={slideToPrev}
