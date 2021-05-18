@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel-js';
+import { config } from 'react-spring';
 
 import ProjectNavBar from '../projectNavigation/projectsNavBar';
 import ProjectGallery from '../projectGallery/projectGallery';
@@ -51,7 +52,11 @@ export default function ProjectsWrapper() {
     slideToNextItem,
     slideToItem,
     useListenToCustomEvent,
-  } = useSpringCarousel({ withLoop: true, items: items });
+  } = useSpringCarousel({
+    withLoop: true,
+    items: items,
+    springConfig: config.slow,
+  });
 
   // Update current item index on slide change
   useListenToCustomEvent((data) => {
