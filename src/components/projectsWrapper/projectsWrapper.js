@@ -37,7 +37,6 @@ const projects = [
 
 export default function ProjectsWrapper() {
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const [totalProjects, setTotalProjects] = useState(projects.length);
 
   // Carousel items array
   const items = projects.map((project, index) => ({
@@ -68,7 +67,7 @@ export default function ProjectsWrapper() {
       <ProjectNavBar
         slideToNext={slideToNextItem}
         slideToPrev={slideToPrevItem}
-        totalProjectsCount={totalProjects}
+        totalProjectsCount={items.length}
         currentProjectIndex={currentItemIndex}
       />
     </div>

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { useSpring, a, config } from 'react-spring';
 
 export default function ProjectNavigation({
@@ -27,7 +27,7 @@ export default function ProjectNavigation({
     return `${xTranslateValue}%`;
   }, [totalProjects, currentProject]);
 
-  // React spring animation
+  // Fill bar spring animation
   const { x } = useSpring({
     x: currentProjectBarWidth(),
     config: config.slow,
