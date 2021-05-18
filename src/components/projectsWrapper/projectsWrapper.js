@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel-js';
 
 import ProjectNavBar from '../projectNavigation/projectsNavBar';
@@ -24,24 +24,43 @@ const projects = [
     desktopMockup: '',
     mobileMockup: '',
   },
+  {
+    name: 'Project name 3',
+    category: 'Project sub',
+    description: 'Project description',
+    technologies: ['react', 'tailwind', 'gatsby'],
+    url: 'www.google.com',
+    desktopMockup: '',
+    mobileMockup: '',
+  },
 ];
 
 export default function ProjectsWrapper() {
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const [totalProjects, setTotalProjects] = useState(projects.length);
+
   // Carousel items array
-  let items = [
-    {
-      id: `ProjectItem-${1}`,
-      renderItem: <ProjectGalleryItem project={projects[0]} />,
-    },
-    {
-      id: `ProjectItem-${2}`,
-      renderItem: <ProjectGalleryItem project={projects[1]} />,
-    },
-  ];
+  const items = projects.map((project, index) => ({
+    id: `ProjectItem-${index}`,
+    renderItem: <ProjectGalleryItem project={project} />,
+  }));
 
   // Carousel constructor
-  const { carouselFragment, slideToPrevItem, slideToNextItem } =
-    useSpringCarousel({ withLoop: true, items: items });
+  const {
+    carouselFragment,
+    slideToPrevItem,
+    slideToNextItem,
+    slideToItem,
+    useListenToCustomEvent,
+  } = useSpringCarousel({ withLoop: true, items: items });
+
+  // Update current item index on slide change
+  useListenToCustomEvent((data) => {
+    if (data.eventName === 'onSlideStartChange') {
+      console.log(data);
+      setCurrentItemIndex(data.nextItem);
+    }
+  });
 
   return (
     <div>
@@ -49,6 +68,8 @@ export default function ProjectsWrapper() {
       <ProjectNavBar
         slideToNext={slideToNextItem}
         slideToPrev={slideToPrevItem}
+        totalProjectsCount={totalProjects}
+        currentProjectIndex={currentItemIndex}
       />
     </div>
   );

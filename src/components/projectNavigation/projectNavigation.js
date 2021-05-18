@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
-export default function ProjectNavigation({ slideToNext, slideToPrev }) {
+export default function ProjectNavigation({
+  slideToNext,
+  slideToPrev,
+  totalProjects,
+  currentProject,
+}) {
   const keyPressHandler = (event) => {
     console.log(event.key);
   };
 
+  // Returns the translate value of the fill bar
+  // that indicates the current project
+  const currentProjectBarWidth = useCallback(() => {
+    const projectBarUnitWidth = 100 / totalProjects;
+    const currentItem = currentProject + 1;
+
+    // The translation value should be negative so the bar moves to the left,
+    // where 100 indicates a full left translation and 0 equals a fully filled bar
+    const xTranslateValue = Math.round(100 - currentItem * projectBarUnitWidth);
+
+    return `translateX(-${xTranslateValue}%)`;
+  }, [totalProjects, currentProject]);
+
   return (
     <div className="flex justify-end items-center text-xl text-gray-500 w-2/3">
+      {/* previous item */}
       <div
         className="hidden md:block transition hover:text-gray-900 hover:shadow-md active:shadow-inner px-3 py-2 rounded-lg"
         role="button"
@@ -16,9 +35,14 @@ export default function ProjectNavigation({ slideToNext, slideToPrev }) {
         <div className="min-w-max">{'<--'} prev</div>
       </div>
 
-      {/* the width of the line should represent the slider time */}
-      <div className="hidden md:block flex-grow h-2 w-full mx-6 bg-gray-100 shadow-inner rounded-lg"></div>
+      {/* current project feedback bar */}
+      <div className="hidden md:block flex-grow h-2 w-full mx-6 bg-gray-100 shadow-inner rounded-lg overflow-hidden relative">
+        <div
+          className="absolute left-0 top-0 h-full rounded-lg shadow-inner bg-gray-500 w-full transition transform"
+          style={{ transform: currentProjectBarWidth() }}></div>
+      </div>
 
+      {/* next item */}
       <div
         className="transition hover:text-gray-900 hover:shadow-md active:shadow-inner px-3 py-2 rounded-lg"
         role="button"
