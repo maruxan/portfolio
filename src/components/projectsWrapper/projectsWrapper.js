@@ -34,6 +34,15 @@ const projects = [
     desktopMockup: '',
     mobileMockup: '',
   },
+  {
+    name: 'Project name 4',
+    category: 'Project sub',
+    description: 'Project description',
+    technologies: ['react', 'tailwind', 'gatsby'],
+    url: 'www.google.com',
+    desktopMockup: '',
+    mobileMockup: '',
+  },
 ];
 
 export default function ProjectsWrapper() {
