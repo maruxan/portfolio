@@ -5,6 +5,7 @@ import { config } from 'react-spring';
 import ProjectNavBar from '../projectNavigation/projectsNavBar';
 import ProjectGallery from '../projectGallery/projectGallery';
 import ProjectGalleryItem from '../projectGallery/projectGalleryItem';
+import ProjectIndex from '../projectIndex/projectIndex';
 
 const projects = [
   {
@@ -82,7 +83,7 @@ export default function ProjectsWrapper() {
   };
 
   let view = <ProjectGallery>{carouselFragment}</ProjectGallery>;
-  if (currentView === 'index') view = null;
+  if (currentView === 'index') view = <ProjectIndex projects={projects} />;
 
   return (
     <div>

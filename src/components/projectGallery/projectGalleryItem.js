@@ -24,7 +24,7 @@ export default function ProjectGalleryItem({ project }) {
             href={project.url}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center max-w-max hover:underline active:italic">
+            className="flex items-center max-w-max hover:underline active:italic mt-4">
             <div>visit site</div>
             <AiOutlineExport className="ml-3" />
           </a>

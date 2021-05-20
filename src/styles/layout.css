@@ -556,19 +556,18 @@ th {
   -moz-font-feature-settings: 'tnum';
   -ms-font-feature-settings: 'tnum';
   -webkit-font-feature-settings: 'tnum';
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: calc(0.5rem - 1px);
 }
-th:first-child,
-td:first-child {
+/* th:first-child, td:first-child {
   padding-left: 0;
 }
 th:last-child,
 td:last-child {
   padding-right: 0;
-}
+} */
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
