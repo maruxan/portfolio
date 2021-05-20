@@ -556,8 +556,8 @@ th {
   -moz-font-feature-settings: 'tnum';
   -ms-font-feature-settings: 'tnum';
   -webkit-font-feature-settings: 'tnum';
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: calc(0.5rem - 1px);
 }
