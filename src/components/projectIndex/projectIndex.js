@@ -4,7 +4,7 @@ import { a, useSpring } from 'react-spring';
 
 import ProjectIndexTable from './projectIndexTable';
 
-export default function ProjectIndex({ projects }) {
+export default function ProjectIndex({ projects, slideToItem }) {
   const [currentProject, setCurrentProject] = useState();
   const [showMockup, setShowMockup] = useState(false);
 
@@ -32,7 +32,11 @@ export default function ProjectIndex({ projects }) {
             onDragStart={(e) => e.preventDefault()}
           />
         </a.div>
-        <ProjectIndexTable projects={projects} onHover={projectHoverHandler} />
+        <ProjectIndexTable
+          projects={projects}
+          onHover={projectHoverHandler}
+          slideToItem={slideToItem}
+        />
       </div>
     </div>
   );

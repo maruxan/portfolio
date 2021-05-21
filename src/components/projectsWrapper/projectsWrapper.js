@@ -82,12 +82,24 @@ export default function ProjectsWrapper() {
     setCurrentView(view);
   };
 
-  let view = <ProjectGallery>{carouselFragment}</ProjectGallery>;
-  if (currentView === 'index') view = <ProjectIndex projects={projects} />;
+  // Slide to project from index view
+  const goToProject = (index) => {
+    setTimeout(() => {
+      // Without the delay the carousel won't slide
+      slideToItem(index);
+    }, 50);
+
+    setCurrentView('gallery');
+  };
 
   return (
     <div>
-      {view}
+      {currentView === 'gallery' && (
+        <ProjectGallery>{carouselFragment}</ProjectGallery>
+      )}
+      {currentView === 'index' && (
+        <ProjectIndex projects={projects} slideToItem={goToProject} />
+      )}
       <ProjectNavBar
         slideToNext={slideToNextItem}
         slideToPrev={slideToPrevItem}
