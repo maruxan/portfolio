@@ -6,7 +6,7 @@ import { BsArrowReturnRight } from 'react-icons/bs';
 
 export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
   return (
-    <div className="table-fixed w-full py-6">
+    <table className="block table-fixed w-full py-6">
       <thead>
         <tr>
           <th className="border-b border-gray-900 w-3/4">name</th>
@@ -39,6 +39,6 @@ export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
           </tr>
         ))}
       </tbody>
-    </div>
+    </table>
   );
 }
