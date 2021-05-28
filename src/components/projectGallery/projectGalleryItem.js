@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-import { AiOutlineExport } from 'react-icons/ai';
+import { BsArrowReturnRight } from 'react-icons/bs';
 import Technologies from '../ui/technologies';
 import ProjectMockups from './projectMockups';
 
@@ -26,7 +26,7 @@ export default function ProjectGalleryItem({ project }) {
             rel="noreferrer"
             className="flex items-center max-w-max hover:underline active:italic mt-4">
             <div>visit site</div>
-            <AiOutlineExport className="ml-3" />
+            <BsArrowReturnRight className="ml-3 mt-1" />
           </a>
         </div>
         {/* project mockups */}
