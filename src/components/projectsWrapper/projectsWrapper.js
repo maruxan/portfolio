@@ -46,6 +46,9 @@ const projects = [
   },
 ];
 
+/**
+ * Contains the project views and it's navigation
+ */
 export default function ProjectsWrapper() {
   const [currentView, setCurrentView] = useState('gallery');
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -77,12 +80,12 @@ export default function ProjectsWrapper() {
     }
   });
 
-  // Switch view
+  // Receives the view as a string ('gallery' or 'index') and switches the view
   const switchView = (view) => {
     setCurrentView(view);
   };
 
-  // Slide to project from index view
+  // Slide to project from index view to gallery view
   const goToProject = (index) => {
     setTimeout(() => {
       // Without the delay the carousel won't slide

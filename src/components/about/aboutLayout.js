@@ -70,17 +70,65 @@ export default function AboutLayout() {
           </h3>
           <p>
             javascript, React.js, redux, GatsbyJS, git, webpack, node.js,
-            Tailwind CSS, bootstrap, sass
+            Tailwind CSS, bootstrap, sass, Figma
           </p>
           <h3 className="mb-2 text-xl">
             technologies that I'm looking foward to learn
           </h3>
           <p>Vue.js, GraphQL, typescript, mongoDB, firebase, testing</p>
         </div>
-        <div
-          className="text-2xl md:text-3xl mt-12 hover:underline active:italic"
-          role="button">
-          {"let's work together -->"}
+        <div className="mt-12 md:flex">
+          <div>
+            <h3 className="mb-2 text-xl">more about me</h3>
+            <ul className="m-0">
+              <li>
+                <a
+                  href="https://github.com/maruxan"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:underline active:italic">
+                  resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/maruxan"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:underline active:italic">
+                  github
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mauricio-garavaglia/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:underline active:italic">
+                  linkedin
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="md:ml-20">
+            <h3 className="mb-2 text-xl">contact info</h3>
+            <ul className="m-0">
+              <li>
+                <a
+                  href="tel:+543624038992"
+                  className="hover:underline active:italic">
+                  +54 362 4038992
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:garavagliamauricio@gmail.com"
+                  className="hover:underline active:italic">
+                  garavagliamauricio@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
