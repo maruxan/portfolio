@@ -13,7 +13,7 @@ export default function ProjectViewSwitch({ currentView, switchView }) {
         onKeyPress={keyPressHandler}
         onClick={() => switchView('gallery')}
         className={`hover:text-gray-900 ${
-          currentView === 'gallery' ? 'text-gray-900' : ''
+          currentView === 'gallery' ? 'text-gray-900 underline' : ''
         } `}>
         {' '}
         gallery
@@ -25,7 +25,7 @@ export default function ProjectViewSwitch({ currentView, switchView }) {
         onKeyPress={keyPressHandler}
         onClick={() => switchView('index')}
         className={`hover:text-gray-900 ${
-          currentView === 'index' ? 'text-gray-900' : ''
+          currentView === 'index' ? 'text-gray-900 underline' : ''
         } `}>
         {' '}
         index
