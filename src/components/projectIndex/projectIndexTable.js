@@ -5,6 +5,10 @@ import Technologies from '../ui/technologies';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
 export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
+  const keyPressHandler = (event) => {
+    console.log(event.key);
+  };
+
   return (
     <table className="block table-fixed w-full py-6">
       <thead>
@@ -21,10 +25,14 @@ export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
             onMouseEnter={() => onHover('enter', index)}
             onMouseLeave={() => onHover('leave', index)}
             key={index}>
-            <td
-              className="transition group-hover:border-transparent md:text-2xl py-4 cursor-pointer"
-              onClick={() => slideToItem(index)}>
-              {project.name}
+            <td className="transition group-hover:border-transparent md:text-2xl py-4 cursor-pointer">
+              <div
+                role="button"
+                tabIndex="0"
+                onClick={() => slideToItem(index)}
+                onKeyPress={keyPressHandler}>
+                {project.name}
+              </div>
             </td>
             <td className="transition align-middle group-hover:border-transparent">
               <Technologies technologies={project.technologies} />
