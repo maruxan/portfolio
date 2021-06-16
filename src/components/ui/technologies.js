@@ -1,13 +1,42 @@
 import React from 'react';
 
-import { SiReact } from 'react-icons/si';
+import {
+  SiReact,
+  SiTailwindcss,
+  SiGatsby,
+  SiWordpress,
+  SiBootstrap,
+  SiJavascript,
+  SiSass,
+  SiHtml5,
+  SiFigma,
+  SiRedux,
+} from 'react-icons/si';
+import { FaElementor } from 'react-icons/fa';
+
+const iconClasses = 'text-xl md:text-3xl mr-2';
+
+const icons = {
+  react: <SiReact className={iconClasses} />,
+  tailwindcss: <SiTailwindcss className={iconClasses} />,
+  gatsbyjs: <SiGatsby className={iconClasses} />,
+  wordpress: <SiWordpress className={iconClasses} />,
+  bootstrap: <SiBootstrap className={iconClasses} />,
+  javascript: <SiJavascript className={iconClasses} />,
+  sass: <SiSass className={iconClasses} />,
+  html: <SiHtml5 className={iconClasses} />,
+  figma: <SiFigma className={iconClasses} />,
+  redux: <SiRedux className={iconClasses} />,
+  elementor: <FaElementor className={iconClasses} />,
+};
 
 export default function Technologies({ technologies }) {
   return (
     <div className="flex">
-      {technologies.map((t) => (
-        <SiReact className="text-xl md:text-3xl mr-2" key={t} />
-      ))}
+      {technologies.map((t) => {
+        console.log(icons[t]);
+        return <div key={t}>{icons[t]}</div>;
+      })}
     </div>
   );
 }
