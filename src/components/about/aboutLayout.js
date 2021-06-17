@@ -15,7 +15,7 @@ export default function AboutLayout() {
 
   // Current age
   const getAge = () => {
-    const bday = new Date(1996, 11, 4);
+    const bday = new Date(1997, 11, 4);
     const today = new Date(Date.now());
 
     return getYearDiff(today, bday);
