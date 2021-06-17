@@ -15,6 +15,7 @@ export default function AboutLayout() {
 
   // Current age
   const getAge = () => {
+    // Fix getYearDiff functionality
     const bday = new Date(1997, 11, 4);
     const today = new Date(Date.now());
 
@@ -81,7 +82,7 @@ export default function AboutLayout() {
           <div>
             <h3 className="mb-2 text-xl">more about me</h3>
             <ul className="m-0">
-              <li>
+              <li className="mb-1">
                 <a
                   href="https://github.com/maruxan"
                   target="_blank"
@@ -90,7 +91,7 @@ export default function AboutLayout() {
                   resume
                 </a>
               </li>
-              <li>
+              <li className="mb-1">
                 <a
                   href="https://github.com/maruxan"
                   target="_blank"
@@ -113,7 +114,7 @@ export default function AboutLayout() {
           <div className="md:ml-20">
             <h3 className="mb-2 text-xl">contact info</h3>
             <ul className="m-0">
-              <li>
+              <li className="mb-1">
                 <a
                   href="tel:+543624038992"
                   className="hover:underline active:italic">
