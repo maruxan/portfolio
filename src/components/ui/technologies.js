@@ -36,7 +36,9 @@ export default function Technologies({ technologies }) {
   return (
     <div className="flex">
       {technologies.map((t) => (
-        <TechnolgyItem key={t}>{icons[t]}</TechnolgyItem>
+        <TechnolgyItem key={t} tech={t}>
+          {icons[t]}
+        </TechnolgyItem>
       ))}
     </div>
   );
