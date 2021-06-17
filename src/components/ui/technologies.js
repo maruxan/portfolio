@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TechnolgyItem from './technolgyItem';
+
 import {
   SiReact,
   SiTailwindcss,
@@ -33,10 +35,9 @@ const icons = {
 export default function Technologies({ technologies }) {
   return (
     <div className="flex">
-      {technologies.map((t) => {
-        console.log(icons[t]);
-        return <div key={t}>{icons[t]}</div>;
-      })}
+      {technologies.map((t) => (
+        <TechnolgyItem key={t}>{icons[t]}</TechnolgyItem>
+      ))}
     </div>
   );
 }
