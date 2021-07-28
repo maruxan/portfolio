@@ -10,10 +10,10 @@ export default function TechnolgyItem({ children, tech }) {
   });
 
   return (
-    <div {...hoverProps} isHovered className="relative">
+    <div {...hoverProps} className="relative">
       <div
         className="absolute left-1/2 -top-7 transform -translate-x-1/2 bg-black text-gray-100 text-xs w-max p-1 rounded-sm"
-        hidden={!isHovered}>
+        hidden={!showLabel}>
         {tech}
       </div>
       <span class="sr-only">{tech}</span>

@@ -84,7 +84,7 @@ export default function AboutLayout() {
             <ul className="m-0">
               <li className="mb-1">
                 <a
-                  href="https://github.com/maruxan"
+                  href="https://www.notion.so/Resume-10c3cf7e2b714a35b97a42f85da64844"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:underline active:italic">

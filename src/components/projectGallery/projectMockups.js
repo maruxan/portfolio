@@ -1,5 +1,6 @@
 import React from 'react';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function ProjectMockups({ desktop, mobile }) {
   return (

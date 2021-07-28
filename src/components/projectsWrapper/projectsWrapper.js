@@ -14,8 +14,8 @@ const projects = [
     description: 'Project description',
     technologies: ['react', 'tailwindcss', 'gatsbyjs'],
     url: 'www.google.com',
-    desktopMockup: '',
-    mobileMockup: '',
+    desktopMockup: '/marq-desktop.png',
+    mobileMockup: '/marq-mobile.png',
   },
   {
     name: 'Project name 2',

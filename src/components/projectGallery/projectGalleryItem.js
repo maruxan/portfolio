@@ -30,7 +30,10 @@ export default function ProjectGalleryItem({ project }) {
           </a>
         </div>
         {/* project mockups */}
-        <ProjectMockups />
+        <ProjectMockups
+          desktop={project.desktopMockup}
+          mobile={project.mobileMockup}
+        />
       </div>
     </animated.div>
   );
