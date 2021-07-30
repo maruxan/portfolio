@@ -23,7 +23,7 @@ export default function ProjectNavigation({
       -100 + currentItem * projectBarUnitWidth
     );
 
-    console.log(xTranslateValue);
+    // console.log(xTranslateValue);
     return `${xTranslateValue}%`;
   }, [totalProjects, currentProject]);
 

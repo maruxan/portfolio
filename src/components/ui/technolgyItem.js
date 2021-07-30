@@ -16,7 +16,7 @@ export default function TechnolgyItem({ children, tech }) {
         hidden={!showLabel}>
         {tech}
       </div>
-      <span class="sr-only">{tech}</span>
+      <span className="sr-only">{tech}</span>
       {children}
     </div>
   );
