@@ -2,7 +2,7 @@ import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
 import { BsArrowReturnRight } from 'react-icons/bs';
-import Technologies from '../ui/technologies';
+import Technologies from '../../ui/technologies';
 import ProjectMockups from './projectMockups';
 
 export default function ProjectGalleryItem({ project }) {

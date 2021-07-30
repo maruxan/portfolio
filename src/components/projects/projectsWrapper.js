@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel-js';
 import { config } from 'react-spring';
 
-import ProjectNavBar from '../projectNavigation/projectsNavBar';
-import ProjectGallery from '../projectGallery/projectGallery';
-import ProjectGalleryItem from '../projectGallery/projectGalleryItem';
-import ProjectIndex from '../projectIndex/projectIndex';
+import ProjectNavBar from './projectNavigation/projectsNavBar';
+import ProjectGallery from './projectGallery/projectGallery';
+import ProjectGalleryItem from './projectGallery/projectGalleryItem';
+import ProjectIndex from './projectIndex/projectIndex';
 
 const projects = [
   {

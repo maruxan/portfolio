@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Technologies from '../ui/technologies';
+import Technologies from '../../ui/technologies';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
 export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
