@@ -26,7 +26,7 @@ export default function ProjectIndex({ projects, slideToItem }) {
       <div className="w-11/12 mx-auto my-20 pr-2 flex">
         <a.div className="w-1/4 h-full sticky hidden lg:block" style={spring}>
           <StaticImage
-            src="../../images/marq-mobile.png"
+            src="../../../images/marq-mobile.png"
             alt="Project mobile view"
             className={`w-full mx-auto block absolute top-6 right-6`}
             onDragStart={(e) => e.preventDefault()}

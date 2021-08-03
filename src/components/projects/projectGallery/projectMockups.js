@@ -8,7 +8,7 @@ export default function ProjectMockups({ desktop, mobile }) {
       {/* Desktop */}
       <figure className="m-0 lg:w-4/5 transform lg:-translate-y-6">
         <StaticImage
-          src="../../images/marq-desktop.png"
+          src="../../../images/marq-desktop.png"
           alt="Project desktop view"
           className="rounded-xl"
           onDragStart={(e) => e.preventDefault()}
@@ -20,7 +20,7 @@ export default function ProjectMockups({ desktop, mobile }) {
       {/* Mobile */}
       <figure className="m-0 pb-24 lg:pb-0 w-full lg:w-1/5 transform lg:translate-x-1/2 lg:translate-y-16">
         <StaticImage
-          src="../../images/marq-mobile.png"
+          src="../../../images/marq-mobile.png"
           alt="Project mobile view"
           className="w-56 mx-auto block lg:w-full"
           onDragStart={(e) => e.preventDefault()}

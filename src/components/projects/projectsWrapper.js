@@ -7,49 +7,10 @@ import ProjectGallery from './projectGallery/projectGallery';
 import ProjectGalleryItem from './projectGallery/projectGalleryItem';
 import ProjectIndex from './projectIndex/projectIndex';
 
-const projects = [
-  {
-    name: 'Project name',
-    category: 'Project sub',
-    description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'www.google.com',
-    desktopMockup: '/marq-desktop.png',
-    mobileMockup: '/marq-mobile.png',
-  },
-  {
-    name: 'Project name 2',
-    category: 'Project sub',
-    description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'www.google.com',
-    desktopMockup: '',
-    mobileMockup: '',
-  },
-  {
-    name: 'Project name 3',
-    category: 'Project sub',
-    description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'www.google.com',
-    desktopMockup: '',
-    mobileMockup: '',
-  },
-  {
-    name: 'Project name 4',
-    category: 'Project sub',
-    description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'www.google.com',
-    desktopMockup: '',
-    mobileMockup: '',
-  },
-];
-
 /**
  * Contains the project views and it's navigation
  */
-export default function ProjectsWrapper() {
+export default function ProjectsWrapper({ projects }) {
   const [currentView, setCurrentView] = useState('gallery');
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
