@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { a, useSpring } from 'react-spring';
 
 import ProjectIndexTable from './projectIndexTable';
 
 export default function ProjectIndex({ projects, slideToItem }) {
-  const [currentProject, setCurrentProject] = useState();
+  const [currentProject, setCurrentProject] = useState(null);
   const [showMockup, setShowMockup] = useState(false);
 
   // Shows the mockup of the current hovered project on the table
-  const projectHoverHandler = (eventType, projectIndex) => {
-    setCurrentProject(projectIndex);
+  const projectHoverHandler = (eventType, project) => {
+    setCurrentProject(project);
 
     if (eventType === 'enter') setShowMockup(true);
     else if (eventType === 'leave') setShowMockup(false);
@@ -21,20 +21,24 @@ export default function ProjectIndex({ projects, slideToItem }) {
     from: { opacity: 0, y: 20 },
   });
 
+  console.log(currentProject);
+
   return (
     <div className="h-full w-full">
       <div className="w-11/12 mx-auto my-20 pr-2 flex">
         <a.div className="w-1/4 h-full sticky hidden lg:block" style={spring}>
-          <StaticImage
-            src="../../../images/marq-mobile.png"
-            alt="Project mobile view"
-            className={`w-full mx-auto block absolute top-6 right-6`}
-            onDragStart={(e) => e.preventDefault()}
-          />
+          {currentProject && (
+            <GatsbyImage
+              image={getImage(currentProject.mobileMockup)}
+              alt="Project mobile view"
+              className={`w-full mx-auto block absolute top-6 right-6`}
+              onDragStart={(e) => e.preventDefault()}
+            />
+          )}
         </a.div>
         <ProjectIndexTable
           projects={projects}
-          onHover={projectHoverHandler}
+          showMockupOnHover={projectHoverHandler}
           slideToItem={slideToItem}
         />
       </div>

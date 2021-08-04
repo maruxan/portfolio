@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel-js';
 import { config } from 'react-spring';
 

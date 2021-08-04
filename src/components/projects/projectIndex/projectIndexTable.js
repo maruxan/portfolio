@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Technologies from '../../ui/technologies';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
-export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
+export default function ProjectIndexTable({
+  projects,
+  showMockupOnHover,
+  slideToItem,
+}) {
   const keyPressHandler = (event) => {
     console.log(event.key);
   };
@@ -22,8 +25,8 @@ export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
         {projects.map((project, index) => (
           <tr
             className="transition transform hover:shadow-xl hover:scale-[1.02] rounded-xl group"
-            onMouseEnter={() => onHover('enter', index)}
-            onMouseLeave={() => onHover('leave', index)}
+            onMouseEnter={() => showMockupOnHover('enter', project)}
+            onMouseLeave={() => showMockupOnHover('leave', null)}
             key={index}>
             <td className="transition group-hover:border-transparent md:text-2xl py-4 cursor-pointer">
               <div
@@ -38,11 +41,11 @@ export default function ProjectIndexTable({ projects, onHover, slideToItem }) {
               <Technologies technologies={project.technologies} />
             </td>
             <td className="transition group-hover:border-transparent">
-              <Link
-                to={project.url}
+              <a
+                href={project.url}
                 className="block border py-2 rounded-full shadow-inner hover:bg-gray-100">
                 <BsArrowReturnRight className="mx-auto" />
-              </Link>
+              </a>
             </td>
           </tr>
         ))}
