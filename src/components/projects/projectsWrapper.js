@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel-js';
 import { config } from 'react-spring';
 
@@ -14,11 +14,15 @@ export default function ProjectsWrapper({ projects }) {
   const [currentView, setCurrentView] = useState('gallery');
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
-  // Carousel items array
-  const items = projects.map((project, index) => ({
-    id: `ProjectItem-${index}`,
-    renderItem: <ProjectGalleryItem project={project} />,
-  }));
+  // Maps projects to carousel items
+  const getProjectsCarouselItems = () => {
+    const items = projects.map((project, index) => ({
+      id: `ProjectItem-${index}`,
+      renderItem: <ProjectGalleryItem project={project} />,
+    }));
+
+    return items;
+  };
 
   // Carousel constructor
   const {
@@ -29,7 +33,7 @@ export default function ProjectsWrapper({ projects }) {
     useListenToCustomEvent,
   } = useSpringCarousel({
     withLoop: true,
-    items: items,
+    items: getProjectsCarouselItems(),
     springConfig: config.slow,
   });
 
@@ -67,7 +71,7 @@ export default function ProjectsWrapper({ projects }) {
       <ProjectNavBar
         slideToNext={slideToNextItem}
         slideToPrev={slideToPrevItem}
-        totalProjectsCount={items.length}
+        totalProjectsCount={projects.length}
         currentProjectIndex={currentItemIndex}
         switchView={switchView}
         currentView={currentView}

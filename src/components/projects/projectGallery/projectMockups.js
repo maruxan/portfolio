@@ -3,12 +3,15 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function ProjectMockups({ desktop, mobile }) {
+  const desktopImage = getImage(desktop);
+  const mobileImage = getImage(mobile);
+
   return (
     <div className="w-full h-full lg:flex lg:flex-row-reverse items-center">
       {/* Desktop */}
       <figure className="m-0 lg:w-4/5 transform lg:-translate-y-6">
-        <StaticImage
-          src="../../../images/marq-desktop.png"
+        <GatsbyImage
+          image={desktopImage}
           alt="Project desktop view"
           className="rounded-xl"
           onDragStart={(e) => e.preventDefault()}
@@ -19,8 +22,8 @@ export default function ProjectMockups({ desktop, mobile }) {
       </figure>
       {/* Mobile */}
       <figure className="m-0 pb-24 lg:pb-0 w-full lg:w-1/5 transform lg:translate-x-1/2 lg:translate-y-16">
-        <StaticImage
-          src="../../../images/marq-mobile.png"
+        <GatsbyImage
+          image={mobileImage}
           alt="Project mobile view"
           className="w-56 mx-auto block lg:w-full"
           onDragStart={(e) => e.preventDefault()}
