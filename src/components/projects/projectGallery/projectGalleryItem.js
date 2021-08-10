@@ -15,16 +15,16 @@ export default function ProjectGalleryItem({ project }) {
       <div className="w-screen h-full lg:flex items-center px-[4vw]">
         {/* project description */}
         <div className="my-6 lg:w-1/3">
-          <h1>{project.name}</h1>
-          <p>{project.category}</p>
-          <p>{project.description}</p>
-          <h3>technologies</h3>
+          <h1 className="mb-3">{project.name}</h1>
+          <p className="mb-2 text-sm">{project.category}</p>
+          <p className="text-gray-500 text-lg mb-6">{project.description}</p>
+          <h3 className="text-base mb-2">technologies</h3>
           <Technologies technologies={project.technologies} />
           <a
             href={project.url}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center max-w-max hover:underline active:italic mt-4">
+            className="flex items-center max-w-max hover:underline active:italic mt-6">
             <div>visit site</div>
             <BsArrowReturnRight className="ml-3 mt-1" />
           </a>

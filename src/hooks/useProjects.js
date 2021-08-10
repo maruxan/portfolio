@@ -2,20 +2,20 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const projects = [
   {
-    name: 'Project name',
-    category: 'Project sub',
+    name: 'Estudio MARQ',
+    category: 'architecture, real estate',
     description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'https://www.google.com',
+    technologies: ['javascript', 'html', 'bootstrap', 'sass'],
+    url: 'http://estudiomarq.com.ar/',
     desktopMockup: '/marq-desktop.png',
     mobileMockup: '/marq-mobile.png',
   },
   {
-    name: 'Project name 2',
-    category: 'Project sub',
+    name: 'Gonzalez Zünd Consultores',
+    category: 'accounting, consultancy',
     description: 'Project description',
-    technologies: ['react', 'tailwindcss', 'gatsbyjs'],
-    url: 'www.google.com',
+    technologies: ['wordpress', 'elementor'],
+    url: 'http://gzconsultores.com.ar/',
     desktopMockup: '/marq-desktop.png',
     mobileMockup: '/marq-mobile.png',
   },

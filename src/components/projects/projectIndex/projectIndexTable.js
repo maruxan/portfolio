@@ -43,6 +43,8 @@ export default function ProjectIndexTable({
             <td className="transition group-hover:border-transparent">
               <a
                 href={project.url}
+                target="_blank"
+                rel="noreferrer"
                 className="block border py-2 rounded-full shadow-inner hover:bg-gray-100">
                 <BsArrowReturnRight className="mx-auto" />
               </a>
