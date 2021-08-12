@@ -24,7 +24,7 @@ export default function ProjectGalleryItem({ project }) {
             href={project.url}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center max-w-max hover:underline active:italic mt-6">
+            className="flex items-center max-w-max hover:underline active:italic mt-6 text-base">
             <div>visit site</div>
             <BsArrowReturnRight className="ml-3 mt-1" />
           </a>
