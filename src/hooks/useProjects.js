@@ -16,8 +16,8 @@ const projects = [
     description: 'Project description',
     technologies: ['react', 'tailwindcss', 'gatsbyjs'],
     url: 'http://northouses.com/',
-    desktopMockup: '/marq-desktop.png',
-    mobileMockup: '/marq-mobile.png',
+    desktopMockup: '/northouses-desktop.png',
+    mobileMockup: '/northouses-mobile.png',
   },
   {
     name: 'Gonzalez Zünd Consultores',
@@ -25,8 +25,8 @@ const projects = [
     description: 'Project description',
     technologies: ['wordpress', 'elementor'],
     url: 'http://gzconsultores.com.ar/',
-    desktopMockup: '/marq-desktop.png',
-    mobileMockup: '/marq-mobile.png',
+    desktopMockup: '/gz-desktop.png',
+    mobileMockup: '/gz-mobile.png',
   },
   {
     name: 'Inspira',
@@ -34,8 +34,8 @@ const projects = [
     description: 'Project description',
     technologies: ['wordpress', 'elementor'],
     url: 'http://inspirarte.com.ar/',
-    desktopMockup: '/marq-desktop.png',
-    mobileMockup: '/marq-mobile.png',
+    desktopMockup: '/inspira-desktop.png',
+    mobileMockup: '/inspira-mobile.png',
   },
 ];
 
@@ -54,7 +54,7 @@ export const useProjects = () => {
               dir
               absolutePath
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
             }
           }
