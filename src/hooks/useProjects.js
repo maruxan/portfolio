@@ -29,6 +29,15 @@ const projects = [
     mobileMockup: '/gz-mobile.png',
   },
   {
+    name: 'React Burger Builder',
+    category: 'food app',
+    description: 'Project description',
+    technologies: ['react', 'redux'],
+    url: 'https://react-burger-builder-86ac9.web.app/',
+    desktopMockup: '/burger-desktop.png',
+    mobileMockup: '/burger-mobile.png',
+  },
+  {
     name: 'Inspira',
     category: 'architecture, blog',
     description: 'Project description',
