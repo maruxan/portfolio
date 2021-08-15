@@ -13,6 +13,7 @@ import {
   SiHtml5,
   SiFigma,
   SiRedux,
+  SiFirebase,
 } from 'react-icons/si';
 import { FaElementor } from 'react-icons/fa';
 
@@ -29,6 +30,7 @@ const icons = {
   html: <SiHtml5 className={iconClasses} />,
   figma: <SiFigma className={iconClasses} />,
   redux: <SiRedux className={iconClasses} />,
+  firebase: <SiFirebase className={iconClasses} />,
   elementor: <FaElementor className={iconClasses} />,
 };
 
