@@ -24,7 +24,8 @@ export default function ProjectMockups({ desktop, mobile }) {
         <GatsbyImage
           image={mobileImage}
           alt="Project mobile view"
-          className="w-56 mx-auto block lg:w-full"
+          className="mx-auto block w-full"
+          imgClassName="w-56 mx-auto"
           onDragStart={(e) => e.preventDefault()}
         />
         <figcaption className="text-center lg:hidden">mobile view</figcaption>
