@@ -8,14 +8,17 @@ export default function TechnolgyItem({ children, tech }) {
   });
 
   return (
-    <div {...hoverProps} className="relative">
+    <div {...hoverProps} className="relative m-1">
       <div
         className="absolute left-1/2 -top-7 transform -translate-x-1/2 bg-black text-gray-100 text-xs w-max p-1 rounded-sm"
         hidden={!isHovered}>
         {tech}
       </div>
       <span className="sr-only">{tech}</span>
-      {children}
+      <div className="flex items-center">
+        {children}
+        <span className="ml-2 md:hidden">{tech}</span>
+      </div>
     </div>
   );
 }

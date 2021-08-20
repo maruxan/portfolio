@@ -61,7 +61,7 @@ export default function ProjectsWrapper({ projects }) {
   };
 
   return (
-    <div>
+    <div className="max-w-screen max-h-screen">
       {currentView === 'gallery' && (
         <ProjectGallery>{carouselFragment}</ProjectGallery>
       )}

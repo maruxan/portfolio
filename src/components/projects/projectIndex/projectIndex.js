@@ -25,7 +25,7 @@ export default function ProjectIndex({ projects, slideToItem }) {
 
   return (
     <div className="h-full w-full">
-      <div className="w-11/12 mx-auto my-20 pr-2 flex">
+      <div className="lg:w-11/12 mx-auto my-20 flex">
         <a.div className="w-1/4 h-full sticky hidden lg:block" style={spring}>
           {currentProject && (
             <GatsbyImage

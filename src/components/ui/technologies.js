@@ -17,7 +17,7 @@ import {
 } from 'react-icons/si';
 import { FaElementor } from 'react-icons/fa';
 
-const iconClasses = 'text-xl md:text-3xl mr-2';
+const iconClasses = 'text-3xl mr-2';
 
 const icons = {
   react: <SiReact className={iconClasses} />,
@@ -36,7 +36,7 @@ const icons = {
 
 export default function Technologies({ technologies }) {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       {technologies.map((t) => (
         <TechnolgyItem key={t} tech={t}>
           {icons[t]}
