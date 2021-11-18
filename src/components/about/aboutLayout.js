@@ -76,11 +76,11 @@ export default function AboutLayout() {
           <h3 className="mb-2 text-xl">
             technologies that I'm looking foward to learn
           </h3>
-          <p>Vue.js, GraphQL, typescript, mongoDB, firebase, testing</p>
+          <p>Vue.js, GraphQL, typescript, mongoDB, firebase, AWS</p>
         </div>
         <div className="mt-12 md:flex">
           <div>
-            <h3 className="mb-2 text-xl">more about me</h3>
+            <h3 className="mb-2 text-xl">contact info</h3>
             <ul className="m-0">
               <li className="mb-1">
                 <a
@@ -107,25 +107,6 @@ export default function AboutLayout() {
                   rel="noreferrer"
                   className="hover:underline active:italic">
                   linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="md:ml-20">
-            <h3 className="mb-2 text-xl">contact info</h3>
-            <ul className="m-0">
-              <li className="mb-1">
-                <a
-                  href="tel:+543624038992"
-                  className="hover:underline active:italic">
-                  +54 362 4038992
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:garavagliamauricio@gmail.com"
-                  className="hover:underline active:italic">
-                  garavagliamauricio@gmail.com
                 </a>
               </li>
             </ul>
