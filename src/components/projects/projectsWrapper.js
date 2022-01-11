@@ -40,7 +40,6 @@ export default function ProjectsWrapper({ projects }) {
   // Update current item index on slide change
   useListenToCustomEvent((data) => {
     if (data.eventName === 'onSlideStartChange') {
-      // console.log(data);
       setCurrentItemIndex(data.nextItem);
     }
   });

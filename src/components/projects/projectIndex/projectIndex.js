@@ -21,8 +21,6 @@ export default function ProjectIndex({ projects, slideToItem }) {
     from: { opacity: 0, y: 20 },
   });
 
-  console.log(currentProject);
-
   return (
     <div className="h-full w-full">
       <div className="lg:w-11/12 mx-auto my-20 flex">
